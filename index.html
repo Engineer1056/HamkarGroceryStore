@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamkar Grocery Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hover-shadow {
+            transition: box-shadow 0.3s;
+        }
+    
+        .hover-shadow:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+    
+        .btn-custom {
+            background-color: #28a745; /* Change to your desired color */
+            color: white;
+            border: none;
+            transition: background-color 0.3s;
+        }
+    
+        .btn-custom:hover {
+            background-color: #218838; /* Darker shade for hover effect */
+        }
+    </style>
+    <!-- <style>
+        .booking-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-control, .btn {
+            height: 45px;
+        }
+        .btn-check-availability {
+            background-color: #00c7b7;
+            color: #fff;
+        }
+    </style> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+     rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- PH , MAIL & ICONS -->
+        <div class="d-flex justify-content-between align-items-center p-2 " style=" background-color: #343a40">
+            <!-- for phone and mail -->
+            <div class="d-flex justify-content-center flex-grow-1">
+                <!-- for phone --> 
+                <div>  
+                        <a class="text-decoration-none text-white" href="#"><i class="me-2 fas fa-phone"
+                             style="color:#1CC3B1 "></i>(+93)794-879219</a>  
+                </div>
+                <!-- for mail -->
+                <div class="ms-5">
+                        <a class="text-decoration-none text-white" href="#"><i class=" me-2 fas fa-envelope"
+                             style="color:#1CC3B1"></i>Eng.nabizada@gmail.com</a>
+                </div>
+            </div>
+            <!-- for icons -->
+            <div class="d-flex flex-grow-1 justify-content-center">
+                        <a href="#"><i class="me-5 ms-5 fab fa-facebook-f text-decoration-none" style="color:white" ></i></a>
+                        <a href="#"><i class="me-5 fab fa-twitter text-decoration-none" style="color:white" ></i></a>
+                        <a href="#"><i class="me-5 fab fa-linkedin-in text-decoration-none" style="color:white" ></i></a>
+                        <a href="#"><i class=" fab fa-instagram text-decoration-none" style="color:white" ></i></a>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="d-flex justify-content-around">
+            <h1>Hamkar Grocery Store</h1>
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light  ">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="me-5 nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="me-5 nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="me-5 nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="me-5 nav-link" href="#">About</a>
+                            </li>
+                        </ul>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </nav>
+            <!-- Order Now -->
+            <div class="d-flex align-items-center justify-content-center text-white pt-2" style="background-color: #1CC3B1">
+                <p class="ps-3">ORDER NOW</p>
+                <i class="p-2 mb-2 fas fa-arrow-right"></i>
+
+            </div>
+        </div>
+        <!-- Main Section -->
+        <div class="d-flex justify-content-center" style= "background-image: url('dark.jpg') ; background-size: 100% 100%">
+            <div class="d-flex flex-column align-items-center text-white justify-content-center" style="height:500px;">
+                <p>Supplier of food supplies in wholesale and retail.</p>
+                <h1>WELCOM TO HAMKAR GROCERY STORE</h1>
+                <button class="p-2 rounded " style="background-color: #1CC3B1">SHOP NOW</button>
+            </div>
+        </div>
+       <!-- form -->
+       <div class="container p-3 border shadow-lg bg-white rounded w-75" style="margin-top: -50px">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <form class="order-form d-flex justify-content-between align-items-center">
+                    <div class="form-group me-3">
+                        <label for="delivery-date">Delivery Date</label>
+                        <input type="date" class="form-control" id="delivery-date" required>
+                    </div>
+                    <div class="form-group me-3">
+                        <label for="food-item">Food Item</label>
+                        <select class="form-select" id="food-item" required>
+                            <option value="" disabled selected>Select Food Item</option>
+                            <option>Fruits</option>
+                            <option>Vegetables</option>
+                            <option>Grains</option>
+                            <option>Dairy Products</option>
+                            <option>Meat</option>
+                            <option>Rices</option>
+                            <option>Flour</option>
+                            <option>Sugar</option>
+                        </select>
+                    </div>
+                    <div class="form-group me-3">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" min="1" value="1" required>
+                    </div>
+                    <div class="form-group me-3">
+                        <label for="adult">Adults</label>
+                        <select class="form-select" id="adult" required>
+                            <option value="" disabled selected>Select Number of Adults</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                        </select>
+                    </div>
+                    <div class="form-group me-3">
+                        <label for="children">Children</label>
+                        <select class="form-select" id="children">
+                            <option value="" disabled selected>Select Number of Children</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn d-flex border bg-success btn-check-availability">Order Supplies</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+<!-- For Cards -->
+
+<div>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Hamkar Grocery Store Supplies</h2>
+        <div class="row">
+            <div class="col-md-4 d-flex">
+                <div class="card shadow-sm hover-shadow flex-fill">
+                    <img src="basmati.jfif" class="card-img-top" alt="Rice">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Basmati Rice</h5>
+                        <p class="card-text">$1.99 per lb</p>
+                        <p class="card-text"><small>Premium quality, fragrant basmati rice.</small></p>
+                        <a href="#" class="btn btn-custom">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card shadow-sm hover-shadow flex-fill">
+                    <img src="all-purpose flour.jfif" class="card-img-top" alt="Flour">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">All-Purpose Flour</h5>
+                        <p class="card-text">$0.89 per lb</p>
+                        <p class="card-text"><small>Versatile flour for all your baking needs.</small></p>
+                        <a href="#" class="btn btn-custom">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card shadow-sm hover-shadow flex-fill">
+                    <img src="granulated sugar.jfif" class="card-img-top" alt="Sugar">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Granulated Sugar</h5>
+                        <p class="card-text">$0.79 per lb</p>
+                        <p class="card-text"><small>Fine granulated sugar for cooking and baking.</small></p>
+                        <a href="#" class="btn btn-custom">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
